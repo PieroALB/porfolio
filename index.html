@@ -24,9 +24,9 @@
         <li><a href="#" class="efect-link">Intro</a></li>
         <li><a href="#about-me" class="efect-link" >Sobre mí</a></li>
         <li><a href="#porfolio" class="efect-link" >Portafolio</a></li>
-        <li><a href="#" class="efect-link" >Contact</a></li>
+        <li><a href="#" class="efect-link" id="contact" >Contact</a></li>
       </ul>
-      <div class="menu"><i class="bi bi-list" ></i></div>
+      <div class="menu"><i class="bi bi-list menu" ></i></div>
     </nav>
     <section id="box-title-figure">
       <article id="contain-title">
@@ -34,7 +34,7 @@
         <h2>Desarrollador de Software</h2>
         <p>Web</p>
       </article>
-      <figure class="figure">
+      <figure class="figure pulse">
         <div></div>
       </figure>
     </section>
@@ -48,7 +48,7 @@
     </section>
   </header>
 
-  <section id="about-me" class="contain-basic">
+  <section id="about-me" class="contain-basic contain-about-me">
     <header>
       <h2>Sobre Mí</h2> 
     </header>
@@ -61,29 +61,32 @@
 
       </div>
       <figure">
-        <div id="figure-one"></div>
+        <div id="figure-one" class="pulse" ></div>
       </figure>
     </article>
   </section >
   
-  <section id="porfolio" class="contain-basic" >
+  <section id="porfolio" class="contain-basic contain-work" >
     <header><h2>trabajos</h2></header>
     <article>
-      <div >
+      <div class="porfolio-work rubberBand">
         <a href="#" >Restaurant Antojitos</a>
         <p>En proceso</p>
-        <div class="work-figure slideInUp"></div>
+        <div class="work-figure"></div>
       </div>
-      <div>
+      <div class="porfolio-work rubberBand " >
         <a href="#">Rental Cars</a>
         <p>En proceso</p>
+        <div class="work-figure"></div>
       </div>
-      <div>
+      <div class="porfolio-work rubberBand" >
         <a href="#">Portafolio</a>
         <p>Completado</p>
+        <div class="work-figure"></div>
       </div>
     </article>
   </section>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="Js/main.js"></script>
 </body>
 </html>

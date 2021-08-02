@@ -13,8 +13,14 @@
   opacity:0;
   border: 2px solid beige;  
 }
+.menu {
+  color: var(--color-white);
+  font-size: 2rem;
+  visibility: hidden;
+}
 #contain-home {
   position: relative;
+  overflow: hidden;
   background-color: var(--background-red);
   display: flex;
   flex-flow: column wrap; 
@@ -104,6 +110,7 @@
   background-color: rgb(255, 190, 11) ;
   display: flex;
   flex-flow: column wrap;
+  overflow:hidden;
 }
 #about-me > header {
   /* border: 2px solid blue; */
@@ -148,6 +155,7 @@
   background-color: rgb(131, 56, 236); 
   display: flex;
   flex-flow: column wrap;
+  overflow:hidden;
   color: var(--color-white);
 }
 #porfolio > header {
@@ -181,16 +189,17 @@
   display: flex;
   flex-flow: column wrap;
   justify-content:center;
-  align-items: center;
-  border: 2px solid red;
+  align-items: center; 
+  cursor: pointer;
   transition: all 500ms ease-in 0s;
 }
 
 .work-figure {
-  width: 10rem;
-  height: 10em;
+  width: 20rem;
+  height: 20em;
   position: absolute;
-  opacity:0;
+  opacity:0;  
+  transition: all 300ms ease-in 0s;
 }
 #porfolio > article > div:hover .work-figure {
   background-image: url(../images/codeperson.svg);
