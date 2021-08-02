@@ -4,88 +4,99 @@
 .contain-basic {
   position: relative;
   width: 100%;
+  /* background-color: gray; */
   height: 100vh;
 }
-.contain {
+.logo {
+  width: 10%;
+  height: 100%;
+  opacity:0;
+  border: 2px solid beige;  
+}
+#contain-home {
+  position: relative;
   background-color: var(--background-red);
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows:1fr 9fr ; 
-  z-index: 5000;
+  display: flex;
+  flex-flow: column wrap; 
 }
-#contain-navbar {
-  display: flex; 
-  position: relative; 
+#contain-navbar{
+  position: relative;
+  z-index: 100;
+  height:10%;
+  display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  /* border: 2px solid blue; */
-}
-
-#contain-navbar ul {
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  padding: .2rem;
+  justify-content: space-between ;
   align-items: center;
   gap: 1rem;
 }
-#contain-navbar ul li a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: var(--color-white);
-  cursor: pointer;
-}
-#box-title-figure { 
-  /* border: 2px solid white; */
-  display: grid;
-  grid-template-columns: repeat(2,5fr);
-}
-.figure {
-  width: 70%;
-  height:100%;
-  bottom: 0;
-  right: 0;
-  position:absolute;
-  z-index:-1000;
-  /* border: 2px solid yellow; */
-}
-.figure > div {
-  width: 100%;
-  height:100%;
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: bottom;
-  background-image: url(../images/programming.svg); 
-}
-#contain-title {
-  /* border: 2px solid green; */
-  padding: 1rem;
-  display: flex;
-  flex-flow: column wrap;
-  font-family: var(--title);
-  text-align: center;
-  font-size: 6rem;
-  justify-content: flex-start;
-  align-items: center;
-  color:var(--color-white);
-}
-#contain-title > p {
-  font-size: 2rem;
-  font-family: var(--phrase);
-}
-
-#contain-links {
+#contain-navbar > ul {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  padding:.5rem;
-  gap:1rem;
-  align-items: center;
+  gap: 1rem;
 }
 
-.bi {
-  font-size: 1.5rem;
+#box-title-figure { 
+  height:80%; 
+  display: flex;
+  flex-flow: row wrap;
+}
+#box-title-figure > article {
+  width: 40%;
+  position: relative;
+  z-index: 100;
   color: var(--color-white);
+  font-family: var(--title);
+  padding: .5rem;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:flex-start;
+  align-items: center;
+}
+#box-title-figure > article > h2 {
+  font-size: 5rem;
+  font-family: var(--title);
+}
+#box-title-figure > article > p {
+  font-size: 2rem;
+  opacity:.7;
+}
+.figure {
+  width: 80%;  
+  position: absolute;
+  right:0px;
+  bottom: 0px;
+  height: 100%;
+}
+.figure > div{
+  width: 100%;
+  height: 100%; 
+  bottom: 0px;
+  background-position: bottom; 
+  background-image: url(../images/programming.svg);
+  background-repeat: no-repeat;
+}
+.efect-link {
+  text-decoration: none;
+  color: var(--color-white);
+  opacity:.7; 
+  transition: all 300ms ease-in 0s;
+}
+.efect-link:hover {
+  font-size: 1.2rem; 
+  opacity:1;
+}
+#contain-links {
+  height: 10%;
+  display: flex;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content:flex-start;
+  gap: 1rem;
+  align-items: center;
+  padding: .2rem;
+  flex-flow: row wrap;
 }
 
 /* TODO: ABOUT ME */
@@ -105,11 +116,9 @@
   font-family:var(--title);
   border-bottom: .2rem solid black;
   padding: .2rem;
-  /* border-radius: 1rem;  */
 }
 
-#about-me > article {
-  /* border: 2px solid red; */
+#about-me > article { 
   height: 90%;
   padding: 1rem;
   display: grid;
@@ -122,9 +131,6 @@
   justify-content:center;
   align-items: center;
 }
-#about-me > article > div > p {
-  text-align: justify;
-}
 #figure-one {
   /* border: 2px solid orange; */
   width: 100%;
@@ -132,6 +138,11 @@
   background-image: url(../images/person.svg);
 }
 
+.subtitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: .5rem;
+}
 /* TODO:PORFOLIO */
 #porfolio {
   background-color: rgb(131, 56, 236); 
@@ -164,15 +175,28 @@
 
 #porfolio > article > div {
   /* border: 2px solid white; */
-  padding: 1rem;
+  padding: 1rem; 
+  position: relative;
   text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:center;
+  align-items: center;
+  border: 2px solid red;
   transition: all 500ms ease-in 0s;
 }
 
-#porfolio > article > div:hover {
-  background-image: url(../images/programming.svg);
+.work-figure {
+  width: 10rem;
+  height: 10em;
+  position: absolute;
+  opacity:0;
+}
+#porfolio > article > div:hover .work-figure {
+  background-image: url(../images/codeperson.svg);
   background-position: center;
   background-origin: top;
+  opacity:1;
   background-repeat: no-repeat;
   background-size: contain;
 }
