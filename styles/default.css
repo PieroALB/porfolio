@@ -55,12 +55,12 @@ table {
   --color-white: rgb(241, 250, 238) ;
   --background-yellow : rgb(255, 190, 11);
 }
+:w
 
 body {
   font-family: var(--phrase);
 }
-
-
+ 
 
 
 

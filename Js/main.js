@@ -1,3 +1,10 @@
+let btn = document.getElementsByClassName("menu")[0];
+let menu = document.getElementsByClassName("list-menu-disabled")[0];
+
+btn.addEventListener("click",function() {
+  menu.classList.toggle("list-menu-activate");
+});
+
 
 (function(){
 
@@ -5,7 +12,7 @@
   let contact = document.getElementById("contact");
   let root =  document.getElementById("contain-home");
 
-  ScrollReveal().reveal(".contain",{delay:1000});
+  ScrollReveal().reveal(".contain");
   ScrollReveal().reveal(".contain-about-me",{delay:1000});
   ScrollReveal().reveal(".contain-work",{delay:1000});
   
@@ -72,16 +79,19 @@
     plinkedin.innerHTML= "<i class='bi bi-linkedin'></i>";
     plinkedin.style.fontSize = "1.5rem";
     plinkedin.style.cursor = "pointer";
-    pinstagram.innerHTML= "<i class='bi bi-instagram'></i>";
-    pinstagram.style.cursor = "pointer";
-    pinstagram.style.fontSize = "1.5rem";
+    plinkedin.style.color ="black";
+    plinkedin.setAttribute("href","https://www.linkedin.com/in/piero-ab/");
+    plinkedin.setAttribute("target","_blank");
+
     pgithub.innerHTML= "<i class='bi bi-github'></i>";
     pgithub.style.cursor = "pointer";
     pgithub.style.fontSize = "1.5rem";
+    pgithub.style.color ="black";
+    pgithub.setAttribute("href","https://github.com/PieroALB");
+    pgithub.setAttribute("target","_blank");
   
     divsocial.appendChild(plinkedin);
-    divsocial.appendChild(pgithub);
-    divsocial.appendChild(pinstagram);
+    divsocial.appendChild(pgithub); 
     divemail.appendChild(pemail);
     divclose.appendChild(pclose);
     containContact.appendChild(divclose);
@@ -90,3 +100,18 @@
     root.appendChild(containContact);
   });
 })();
+
+const typed = new Typed('.typed',{
+  strings: ['Hola soy piero <br> Desarrollador de Software'],
+  typeSpeed : 75,
+  startDelay : 300,
+  backSpeed : 75,
+  smartBackspace :  true,
+  shuffle : false,
+  backDelay : 1500,
+  loop : true,
+  loopCount : false,
+  showCursor : true,
+  cursorChar: '|',
+  contentType : 'html'
+});
